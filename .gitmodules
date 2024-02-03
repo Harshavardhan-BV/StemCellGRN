@@ -1,0 +1,6 @@
+[submodule "RASSPE"]
+	path = RASSPE
+	url = git@github.com:Harshavardhan-BV/RASSPE
+[submodule "Boolean.jl"]
+	path = Boolean.jl
+	url = git@github.com:askhari139/Boolean.jl
