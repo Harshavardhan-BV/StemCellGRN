@@ -7,7 +7,7 @@ def Fn(topo):
     # Read the output file
     df = pd.read_csv('../Output/'+topo+'_finFlagFreq.csv')
     # Remove non converged states
-    df = df[df['flag']==1]
+    df = df[df['flag']==1].reset_index()
     if len(df)==0:
         return
     # convert states to binary
@@ -29,7 +29,7 @@ def Fn(topo):
 def plot_Fn(Fn, topo, suff=''):
     # Plot the results
     n_max = Fn['sum'].max()
-    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1),)
+    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1))
     plt.title(topo)
     plt.xlabel('Fn')
     plt.ylabel('Frequency')
