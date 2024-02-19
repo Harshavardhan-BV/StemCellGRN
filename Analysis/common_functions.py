@@ -27,10 +27,10 @@ def Fn(topo):
         df.iloc[-len(n_not):,:].loc[:,'sum'] = list(n_not)
     return df
 
-def plot_Fn(Fn, topo, suff='', pfx=''):
+def plot_Fn(Fn, topo, suff='', pfx='', hue=None):
     # Plot the results
     n_max = Fn['sum'].max()
-    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1))
+    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1), hue=hue)
     plt.title(topo)
     plt.xlabel('Fn')
     plt.ylabel('Frequency')

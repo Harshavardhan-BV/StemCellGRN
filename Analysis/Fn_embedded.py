@@ -58,13 +58,16 @@ All['Emb_sizexDensity'] = All['Emb_size'].astype(str) + "_" + All['Emb_density']
 #%%
 # Sort All by Emb_size and then by Emb_density
 All = All.sort_values(by=['Emb_size','Emb_density'])
+#%%
+All.to_csv('../Analysed_data/embedded_Fn.csv',index=False)
+#%%
+# Read if already saved
+All = pd.read_csv('../Analysed_data/embedded_Fn.csv')
 # %%
 plot_Fi(All,1, suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/')
 plot_Fi(All,'n_2', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/')
 plot_Fi(All,'n_2+1', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/')
 plot_Fi(All,'n_2-1', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/')
-#%%
-All.to_csv('../Analysed_data/embedded_Fn.csv',index=False)
 #%%
 # Plot size wise
 for size in All['Emb_size'].unique():
@@ -81,3 +84,9 @@ for density in All['Emb_density'].unique():
     plot_Fi(df,'n_2', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
     plot_Fi(df,'n_2+1', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
     plot_Fi(df,'n_2-1', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
+# %%
+# Plot n wise
+for n in All['Nodes'].unique():
+    df = All[All['Nodes']==n]
+    plot_Fn(df, f'T{n}', pfx='Embedded/', suff='_embedded', hue='Emb_sizexDensity')
+# %%
