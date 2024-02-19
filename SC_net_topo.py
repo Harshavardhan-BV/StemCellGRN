@@ -15,3 +15,9 @@ for n in range(2,9):
 for n in range(2,9):
     for m in range(2,11):
         ng.team_n(n,m)
+# %%
+# Toggle n teams of random members with total m x n members
+for i in range(5):
+    for n in range(2,9):
+        for m in range(2,11):
+            ng.team_n_rand_split(n,m*n)

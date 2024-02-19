@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+plt.rcParams['svg.hashsalt'] = ''
 
 def Fn(topo):
     # Read the output file
@@ -26,18 +27,18 @@ def Fn(topo):
         df.iloc[-len(n_not):,:].loc[:,'sum'] = list(n_not)
     return df
 
-def plot_Fn(Fn, topo, suff=''):
+def plot_Fn(Fn, topo, suff='', pfx=''):
     # Plot the results
     n_max = Fn['sum'].max()
     sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1))
     plt.title(topo)
     plt.xlabel('Fn')
     plt.ylabel('Frequency')
-    plt.savefig('../figures/Fn_'+topo+suff+'.svg')
+    plt.savefig('../figures/'+pfx+'Fn_'+topo+suff+'.svg')
     plt.clf()
     plt.close()
 
-def plot_Fi(Fn_all,i, suff='',hue=None):
+def plot_Fi(Fn_all,i, suff='', pfx='' ,hue=None):
     if type(i) == int:
         Fi = Fn_all[Fn_all['sum']==i]
         ylab = 'F'+str(i)
@@ -53,6 +54,6 @@ def plot_Fi(Fn_all,i, suff='',hue=None):
     sns.barplot(x='Nodes',y='Avg0',data=Fi, hue=hue)
     plt.ylim(0,1)
     plt.ylabel(ylab)
-    plt.savefig('../figures/F'+str(i)+suff+'.svg')
+    plt.savefig('../figures/'+pfx+'F'+str(i)+suff+'.svg')
     plt.clf()
     plt.close()
