@@ -21,3 +21,10 @@ for i in range(5):
     for n in range(2,9):
         for m in range(2,11):
             ng.team_n_rand_split(n,m*n)
+# %%
+# Embedded toggle n networks
+for n in range(2,9):
+    for size in range(10,21,5):
+        for density in range(2,7,2):
+            ng.embedded_toggle(n, size, density, 100)
+#%%

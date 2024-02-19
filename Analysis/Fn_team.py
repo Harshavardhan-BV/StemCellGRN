@@ -58,7 +58,7 @@ def Fn_team(topo, type='all'):
     # Read the output file
     df = pd.read_csv('../Output/'+topo+'_finFlagFreq.csv')
     # Remove non converged states
-    df = df[df['flag']==1]
+    df = df[df['flag']==1].reset_index()
     if len(df)==0:
         return
     # Convert states to team wise binary
