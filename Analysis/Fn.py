@@ -6,6 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from common_functions import Fn, plot_Fn, plot_Fi
+sns.set_context('poster')
 # %%
 def Fn_all(files):
     Fn_all = pd.DataFrame()
@@ -47,12 +48,17 @@ plot_Fi(df,1,'_SI')
 df['Reg'] = 'SI'
 All = pd.concat([All,df], axis=0)
 # %%
-plot_Fi(All,1, suff='_hedron',hue='Reg')
-# %%
-plot_Fi(All,'n_2', suff='_hedron',hue='Reg')
-# %%
-plot_Fi(All,'n_2+1', suff='_hedron',hue='Reg')
-# %%
-plot_Fi(All,'n_2-1', suff='_hedron',hue='Reg')
-# %%
 All.to_csv('../Analysed_data/nhedron_Fn.csv',index=False)
+# %%
+plot_Fi(All,1, suff='_hedron',hue='Reg')
+#%%
+# Select only even number of nodes
+AllE = All[All['Nodes']%2==0]
+plot_Fi(AllE,'n_2', suff='_hedron',hue='Reg')
+plot_Fi(AllE,'n_2+1', suff='_hedron',hue='Reg')
+plot_Fi(AllE,'n_2-1', suff='_hedron',hue='Reg')
+# %%
+# Select only odd number of nodes
+AllO = All[All['Nodes']%2==1]
+plot_Fi(AllO,'n-1_2', suff='_hedron',hue='Reg')
+plot_Fi(AllO,'n+1_2', suff='_hedron',hue='Reg')

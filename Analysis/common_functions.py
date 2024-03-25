@@ -30,7 +30,7 @@ def Fn(topo):
 def plot_Fn(Fn, topo, suff='', pfx='', hue=None):
     # Plot the results
     n_max = Fn['sum'].max()
-    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1), hue=hue)
+    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1), hue=hue, palette='inferno')
     plt.title(topo)
     plt.xlabel('Fn')
     plt.ylabel('Frequency')
@@ -38,22 +38,29 @@ def plot_Fn(Fn, topo, suff='', pfx='', hue=None):
     plt.clf()
     plt.close()
 
-def plot_Fi(Fn_all,i, suff='', pfx='' ,hue=None):
+def plot_Fi(Fn_all,i, suff='', pfx='', hue=None):
     if type(i) == int:
         Fi = Fn_all[Fn_all['sum']==i]
-        ylab = 'F'+str(i)
+        ylab = r'$F('+str(i)+')$'
     elif i == 'n_2':
         Fi = Fn_all[Fn_all['sum'] == Fn_all['Nodes']//2]
-        ylab = 'F(n/2)'
+        ylab = r'$F(\frac{n}{2})$'
     elif i == 'n_2+1':
         Fi = Fn_all[Fn_all['sum'] == Fn_all['Nodes']//2+1]
-        ylab = 'F(n/2+1)'
+        ylab = r'$F(\frac{n}{2}+1)$'
     elif i == 'n_2-1':
         Fi = Fn_all[Fn_all['sum'] == Fn_all['Nodes']//2-1]
-        ylab = 'F(n/2-1)'
+        ylab = r'$F(\frac{n}{2}-1)$'
+    elif i == 'n-1_2':
+        Fi = Fn_all[Fn_all['sum'] == (Fn_all['Nodes']-1)//2]
+        ylab = r'$F(\frac{n-1}{2})$'
+    elif i == 'n+1_2':
+        Fi = Fn_all[Fn_all['sum'] == (Fn_all['Nodes']+1)//2]
+        ylab = r'$F(\frac{n+1}{2})$'
     sns.barplot(x='Nodes',y='Avg0',data=Fi, hue=hue)
-    plt.ylim(0,1)
+    plt.ylim(0,1.1)
     plt.ylabel(ylab)
+    plt.tight_layout()
     plt.savefig('../figures/'+pfx+'F'+str(i)+suff+'.svg')
     plt.clf()
     plt.close()

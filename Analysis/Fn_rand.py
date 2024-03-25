@@ -6,6 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from common_functions import Fn, plot_Fn, plot_Fi
+sns.set_context('poster')
 #%%
 def Fn_rand(topo):
     randi = glob.glob('../Output/'+topo+'_rand/*/*_finFlagFreq.csv')
@@ -36,9 +37,17 @@ for topo in files:
     plot_Fn(df, topo, suff='_rand')
     All = pd.concat([All,df], axis=0)
 # %%
-plot_Fi(All,1,suff='_rand', hue='Reg')
-plot_Fi(All,'n_2',suff='_rand', hue='Reg')
-plot_Fi(All,'n_2+1',suff='_rand', hue='Reg')
-plot_Fi(All,'n_2-1',suff='_rand', hue='Reg')
-# %%
 All.to_csv('../Analysed_data/rand_Fn.csv',index=False)
+#%%
+All = All.sort_values(by=['Reg'])
+# %%
+plot_Fi(All,1,suff='_rand', hue='Reg')
+# #%%
+AllE = All[All['Nodes']%2==0]
+plot_Fi(AllE,'n_2',suff='_rand', hue='Reg')
+plot_Fi(AllE,'n_2+1',suff='_rand', hue='Reg')
+plot_Fi(AllE,'n_2-1',suff='_rand', hue='Reg')
+# #%%
+AllO = All[All['Nodes']%2==1]
+plot_Fi(AllO,'n-1_2',suff='_rand', hue='Reg')
+plot_Fi(AllO,'n+1_2',suff='_rand', hue='Reg')
