@@ -27,10 +27,10 @@ def Fn(topo):
         df.iloc[-len(n_not):,:].loc[:,'sum'] = list(n_not)
     return df
 
-def plot_Fn(Fn, topo, suff='', pfx='', hue=None):
+def plot_Fn(Fn, topo, suff='', pfx='', hue=None, palette='inferno',**kwargs):
     # Plot the results
     n_max = Fn['sum'].max()
-    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1), hue=hue, palette='inferno')
+    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1), hue=hue, palette=palette, **kwargs)
     plt.title(topo)
     plt.xlabel('Fn')
     plt.ylabel('Frequency')
@@ -38,7 +38,7 @@ def plot_Fn(Fn, topo, suff='', pfx='', hue=None):
     plt.clf()
     plt.close()
 
-def plot_Fi(Fn_all,i, suff='', pfx='', hue=None):
+def plot_Fi(Fn_all,i, suff='', pfx='', hue=None, **kwargs):
     if type(i) == int:
         Fi = Fn_all[Fn_all['sum']==i]
         ylab = r'$F('+str(i)+')$'
@@ -57,7 +57,7 @@ def plot_Fi(Fn_all,i, suff='', pfx='', hue=None):
     elif i == 'n+1_2':
         Fi = Fn_all[Fn_all['sum'] == (Fn_all['Nodes']+1)//2]
         ylab = r'$F(\frac{n+1}{2})$'
-    sns.barplot(x='Nodes',y='Avg0',data=Fi, hue=hue)
+    sns.barplot(x='Nodes',y='Avg0',data=Fi, hue=hue, **kwargs)
     plt.ylim(0,1.1)
     plt.ylabel(ylab)
     plt.tight_layout()

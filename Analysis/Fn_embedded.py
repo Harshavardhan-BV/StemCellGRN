@@ -5,7 +5,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import itertools as it
 from common_functions import Fn, plot_Fn, plot_Fi
+sns.set_context('poster')
 #%%
 os.makedirs('../figures/Embedded', exist_ok=True)
 # list the files
@@ -64,29 +66,38 @@ All.to_csv('../Analysed_data/embedded_Fn.csv',index=False)
 # Read if already saved
 All = pd.read_csv('../Analysed_data/embedded_Fn.csv')
 # %%
-plot_Fi(All,1, suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/')
-plot_Fi(All,'n_2', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/')
-plot_Fi(All,'n_2+1', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/')
-plot_Fi(All,'n_2-1', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/')
+# Select only even number of nodes
+AllE = All[All['Nodes']%2==0]
+# Select only odd number of nodes
+AllO = All[All['Nodes']%2==1]
+#%%
+plot_Fi(All,1, suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/', legend=False)
+plot_Fi(AllE,'n_2', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/', legend=False)
+plot_Fi(AllE,'n_2+1', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/', legend=False)
+plot_Fi(AllE,'n_2-1', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/', legend=False)
+plot_Fi(AllO,'n-1_2', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/', legend=False)
+plot_Fi(AllO,'n+1_2', suff='_embedded',hue='Emb_sizexDensity', pfx='Embedded/', legend=False)
 #%%
 # Plot size wise
 for size in All['Emb_size'].unique():
-    df = All[All['Emb_size']==size]
-    plot_Fi(df,1, suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/')
-    plot_Fi(df,'n_2', suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/')
-    plot_Fi(df,'n_2+1', suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/')
-    plot_Fi(df,'n_2-1', suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/')
+    plot_Fi(All[All['Emb_size']==size],1, suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/', palette='viridis')
+    plot_Fi(AllE[AllE['Emb_size']==size],'n_2', suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/', palette='viridis')
+    plot_Fi(AllE[AllE['Emb_size']==size],'n_2+1', suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/', palette='viridis')
+    plot_Fi(AllE[AllE['Emb_size']==size],'n_2-1', suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/', palette='viridis')
+    plot_Fi(AllO[AllO['Emb_size']==size],'n-1_2', suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/', palette='viridis')
+    plot_Fi(AllO[AllO['Emb_size']==size],'n+1_2', suff=f'_embsize-{size}',hue='Emb_density', pfx='Embedded/', palette='viridis')
 # %%
 # Plot density wise
 for density in All['Emb_density'].unique():
-    df = All[All['Emb_density']==density]
-    plot_Fi(df,1, suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
-    plot_Fi(df,'n_2', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
-    plot_Fi(df,'n_2+1', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
-    plot_Fi(df,'n_2-1', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
+    plot_Fi(All[All['Emb_density']==density],1, suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
+    plot_Fi(AllE[AllE['Emb_density']==density],'n_2', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
+    plot_Fi(AllE[AllE['Emb_density']==density],'n_2+1', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
+    plot_Fi(AllE[AllE['Emb_density']==density],'n_2-1', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
+    plot_Fi(AllO[AllO['Emb_density']==density],'n-1_2', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
+    plot_Fi(AllO[AllO['Emb_density']==density],'n+1_2', suff=f'_embdens-{density}',hue='Emb_size', pfx='Embedded/')
 # %%
 # Plot n wise
 for n in All['Nodes'].unique():
     df = All[All['Nodes']==n]
-    plot_Fn(df, f'T{n}', pfx='Embedded/', suff='_embedded', hue='Emb_sizexDensity')
+    plot_Fn(df, f'T{n}', pfx='Embedded/', suff='_embedded', hue='Emb_sizexDensity',palette=None)
 # %%
