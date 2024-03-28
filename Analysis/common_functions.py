@@ -24,13 +24,14 @@ def Fn(topo):
     # Add the missing sums as 
     df = df.reindex(range(0,n_max+1), fill_value=0)
     if len(n_not)>0:
-        df.iloc[-len(n_not):,:].loc[:,'sum'] = list(n_not)
+        not_idx = df.index[-len(n_not):]
+        df.loc[not_idx,'sum'] = list(n_not)
     return df
 
-def plot_Fn(Fn, topo, suff='', pfx='', hue=None, palette='inferno',**kwargs):
+def plot_Fn(Fn, topo, suff='', pfx='', hue='sum', palette='inferno',legend=False,**kwargs):
     # Plot the results
     n_max = Fn['sum'].max()
-    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1), hue=hue, palette=palette, **kwargs)
+    sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1), hue=hue, palette=palette, legend=legend, **kwargs)
     plt.title(topo)
     plt.xlabel('Fn')
     plt.ylabel('Frequency')
@@ -38,26 +39,26 @@ def plot_Fn(Fn, topo, suff='', pfx='', hue=None, palette='inferno',**kwargs):
     plt.clf()
     plt.close()
 
-def plot_Fi(Fn_all,i, suff='', pfx='', hue=None, **kwargs):
+def plot_Fi(Fn_all,i, x='Nodes', y='Avg0', suff='', pfx='', hue=None, **kwargs):
     if type(i) == int:
         Fi = Fn_all[Fn_all['sum']==i]
         ylab = r'$F('+str(i)+')$'
     elif i == 'n_2':
-        Fi = Fn_all[Fn_all['sum'] == Fn_all['Nodes']//2]
+        Fi = Fn_all[Fn_all['sum'] == Fn_all[x]//2]
         ylab = r'$F(\frac{n}{2})$'
     elif i == 'n_2+1':
-        Fi = Fn_all[Fn_all['sum'] == Fn_all['Nodes']//2+1]
+        Fi = Fn_all[Fn_all['sum'] == Fn_all[x]//2+1]
         ylab = r'$F(\frac{n}{2}+1)$'
     elif i == 'n_2-1':
-        Fi = Fn_all[Fn_all['sum'] == Fn_all['Nodes']//2-1]
+        Fi = Fn_all[Fn_all['sum'] == Fn_all[x]//2-1]
         ylab = r'$F(\frac{n}{2}-1)$'
     elif i == 'n-1_2':
-        Fi = Fn_all[Fn_all['sum'] == (Fn_all['Nodes']-1)//2]
+        Fi = Fn_all[Fn_all['sum'] == (Fn_all[x]-1)//2]
         ylab = r'$F(\frac{n-1}{2})$'
     elif i == 'n+1_2':
-        Fi = Fn_all[Fn_all['sum'] == (Fn_all['Nodes']+1)//2]
+        Fi = Fn_all[Fn_all['sum'] == (Fn_all[x]+1)//2]
         ylab = r'$F(\frac{n+1}{2})$'
-    sns.barplot(x='Nodes',y='Avg0',data=Fi, hue=hue, **kwargs)
+    sns.barplot(x=x,y=y,data=Fi, hue=hue, **kwargs)
     plt.ylim(0,1.1)
     plt.ylabel(ylab)
     plt.tight_layout()
