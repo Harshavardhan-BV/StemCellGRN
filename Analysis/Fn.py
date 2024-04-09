@@ -44,7 +44,7 @@ All = pd.concat([All,df], axis=0)
 files = glob.glob('../Output/T[1-9]SI_finFlagFreq.csv')
 files = [os.path.basename(x).replace('_finFlagFreq.csv','') for x in files]
 df = Fn_all(files)
-plot_Fi(df,1,'_SI')
+plot_Fi(df,1,suff='_SI')
 df['Reg'] = 'SI'
 All = pd.concat([All,df], axis=0)
 # %%

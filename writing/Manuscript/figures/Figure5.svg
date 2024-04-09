@@ -27,15 +27,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.36614058"
-     inkscape:cx="543.50709"
-     inkscape:cy="562.62543"
+     inkscape:zoom="2.9291246"
+     inkscape:cx="1276.832"
+     inkscape:cy="59.403413"
      inkscape:window-width="1920"
      inkscape:window-height="1008"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer5" /><defs
+     inkscape:current-layer="legend_1-0" /><defs
      id="defs1"><rect
        x="1526.6484"
        y="272.18246"
@@ -9272,7 +9272,7 @@
              style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:square;stroke-linejoin:miter"
              id="path69-20" /></g></g></g><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="208.61633"
        y="148.00197"
        id="text1093"><tspan
@@ -9282,7 +9282,7 @@
          x="208.61633"
          y="148.00197">Embedding Density = 2</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="261.84317"
        y="148.00197"
        id="text1094"><tspan
@@ -9292,7 +9292,7 @@
          x="261.84317"
          y="148.00197">Embedding Density = 4</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="315.17032"
        y="148.00197"
        id="text1095"><tspan
@@ -9305,63 +9305,63 @@
      id="layer5"
      inkscape:label="Text"><text
        xml:space="preserve"
-       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
+       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
        x="5.0863032"
        y="81.389687"
        id="text95-1-2"><tspan
          sodipodi:role="line"
          id="tspan95-1-4"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667;stroke:none"
          x="5.0863032"
          y="81.389687">C</tspan></text><text
        xml:space="preserve"
-       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
+       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
        x="190.03462"
        y="81.278069"
        id="text95-1-2-0"><tspan
          sodipodi:role="line"
          id="tspan95-1-4-5"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667;stroke:none"
          x="190.03462"
          y="81.278069">D</tspan></text><text
        xml:space="preserve"
-       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
+       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
        x="5.435636"
        y="16.278069"
        id="text1172"><tspan
          sodipodi:role="line"
          id="tspan1172"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667;stroke:none"
          x="5.435636"
          y="16.278069">A</tspan></text><text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
        x="189.67909"
        y="16.278069"
        id="text1173"><tspan
          sodipodi:role="line"
          id="tspan1173"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667;stroke:none"
          x="189.67909"
          y="16.278069">B</tspan></text><text
        xml:space="preserve"
-       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
+       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
        x="4.4496493"
        y="146.27808"
        id="text1174"><tspan
          sodipodi:role="line"
          id="tspan1174"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667;stroke:none"
          x="4.4496493"
          y="146.27808">E</tspan></text><text
        xml:space="preserve"
-       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
+       style="font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.211667;stroke-linecap:square;stroke-linejoin:round;paint-order:stroke markers fill"
        x="189.20987"
        y="146.27808"
        id="text1175"><tspan
          sodipodi:role="line"
          id="tspan1175"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';stroke-width:0.211667;stroke:none"
          x="189.20987"
          y="146.27808">F</tspan></text><g
        id="legend_1-0"
@@ -9378,7 +9378,7 @@
            x="-284.58859"
            y="151.15106">Embedding Size</tspan></text><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.9456px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;display:inline;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.43993;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.9456px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;display:inline;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:2.43993;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
          x="5.8363504"
          y="152.41254"
          id="text1221-4"><tspan
@@ -9388,7 +9388,7 @@
            x="5.8363504"
            y="152.41254">10</tspan></text><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.9456px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.43993;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.9456px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:2.43993;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
          x="116.42834"
          y="152.26787"
          id="text1221-4-5"><tspan
@@ -9398,7 +9398,7 @@
            x="116.42834"
            y="152.26787">15</tspan></text><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.9456px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.43993;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.9456px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:2.43993;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
          x="227.82401"
          y="152.41254"
          id="text1221-4-5-5"><tspan
@@ -10508,7 +10508,7 @@
              style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:square;stroke-linejoin:miter"
              id="path77-45" /></g></g></g><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="208.61633"
        y="83.001968"
        id="text1017"><tspan
@@ -10518,7 +10518,7 @@
          x="208.61633"
          y="83.001968">Embedding Density = 2</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="261.84317"
        y="83.001968"
        id="text1018"><tspan
@@ -10528,7 +10528,7 @@
          x="261.84317"
          y="83.001968">Embedding Density = 4</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="315.17032"
        y="83.001968"
        id="text1019"><tspan
@@ -11469,7 +11469,7 @@
              style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:square;stroke-linejoin:miter"
              id="path69-06" /></g></g></g><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;paint-order:markers fill stroke"
        x="23.032436"
        y="148.00197"
        id="text1096"><tspan
@@ -11479,7 +11479,7 @@
          x="23.032436"
          y="148.00197">Embedding Density = 2</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="76.25927"
        y="148.00198"
        id="text1097"><tspan
@@ -11489,7 +11489,7 @@
          x="76.25927"
          y="148.00198">Embedding Density = 4</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="129.58643"
        y="148.00198"
        id="text1098"><tspan
@@ -12973,7 +12973,7 @@
              style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:square;stroke-linejoin:miter"
              id="path97-8" /></g></g></g><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;paint-order:markers fill stroke"
        x="23.032436"
        y="18.001974"
        id="text777"><tspan
@@ -12983,7 +12983,7 @@
          x="23.032436"
          y="18.001974">Embedding Density = 2</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="76.25927"
        y="18.001982"
        id="text777-6"><tspan
@@ -12993,7 +12993,7 @@
          x="76.25927"
          y="18.001982">Embedding Density = 4</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="129.58643"
        y="18.001982"
        id="text777-1"><tspan
@@ -14068,7 +14068,7 @@
              style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:square;stroke-linejoin:miter"
              id="path75-7" /></g></g></g><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="208.61664"
        y="18.001982"
        id="text777-4"><tspan
@@ -14078,7 +14078,7 @@
          x="208.61664"
          y="18.001982">Embedding Density = 2</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="261.06583"
        y="18.001989"
        id="text777-6-8"><tspan
@@ -14088,7 +14088,7 @@
          x="261.06583"
          y="18.001989">Embedding Density = 4</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="315.17032"
        y="18.001989"
        id="text777-1-4"><tspan
@@ -15173,7 +15173,7 @@
              style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:square;stroke-linejoin:miter"
              id="path77-3" /></g></g></g><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;paint-order:markers fill stroke"
        x="23.032436"
        y="83.001968"
        id="text1014"><tspan
@@ -15183,7 +15183,7 @@
          x="23.032436"
          y="83.001968">Embedding Density = 2</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="76.25927"
        y="83.001984"
        id="text1015"><tspan
@@ -15193,7 +15193,7 @@
          x="76.25927"
          y="83.001984">Embedding Density = 4</tspan></text><text
        xml:space="preserve"
-       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
+       style="font-size:3.95118px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:start;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.146003;stroke-linecap:square;stroke-linejoin:round;paint-order:markers fill stroke"
        x="129.58643"
        y="83.001984"
        id="text1016"><tspan
