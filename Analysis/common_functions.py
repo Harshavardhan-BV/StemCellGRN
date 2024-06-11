@@ -28,12 +28,12 @@ def Fn(topo):
         df.loc[not_idx,'sum'] = list(n_not)
     return df
 
-def plot_Fn(Fn, topo, suff='', pfx='', hue='sum', palette='inferno',legend=False,**kwargs):
+def plot_Fn(Fn, topo, suff='', pfx='', hue='sum', palette='rocket',legend=False,**kwargs):
     # Plot the results
     n_max = Fn['sum'].max()
     sns.barplot(x='sum',y='Avg0',data=Fn, order=range(0,n_max+1), hue=hue, palette=palette, legend=legend, **kwargs)
     plt.title(topo)
-    plt.xlabel('Fn')
+    plt.xlabel(r'$n_{high}$')
     plt.ylabel('Frequency')
     plt.savefig('../figures/'+pfx+'Fn_'+topo+suff+'.svg')
     plt.clf()
