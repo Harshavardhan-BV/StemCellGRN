@@ -33,7 +33,7 @@ def barplot_frust(frust, n, Self):
     Self = ['SI','','SA'][Self+1]
     # plt.axhline(0.5, color='black', linestyle='--')
     plt.title(f'T{n}{Self}')
-    plt.savefig(f'./figures/Frustration/Frustration_T{n}{Self}.svg')
+    plt.savefig(f'../figures/Frustration/Frustration_T{n}{Self}.svg')
     plt.clf()
     plt.close()
 #%%
@@ -43,9 +43,9 @@ for n in range(2,9):
         df = frustration(n, Self)
         frust = pd.concat([frust,df], axis=0)
 #%%
-frust.to_csv('./Analysed_data/Frustration.csv',index=False)
+frust.to_csv('../Analysed_data/Frustration.csv',index=False)
 # %%
-os.makedirs('./figures/Frustration', exist_ok=True)
+os.makedirs('../figures/Frustration', exist_ok=True)
 for n in range(2,9):
     for Self in [0,1,-1]:
         barplot_frust(frust, n, Self)

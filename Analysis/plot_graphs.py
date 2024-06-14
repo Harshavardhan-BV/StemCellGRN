@@ -15,7 +15,5 @@ for topo in topos:
     topo = topo.replace('.topo','')
     print(topo)
     TopoToAdj(topo, plot=True)
-    if ('SI' in topo):
-        continue
     plot_graphTopo(topo)
 # %%
