@@ -31,6 +31,11 @@ Boolean simulations of toggle-n networks to represent stem cell differentiation.
 - [figures](./figures): Contains the figures generated from the analysis scripts
 - [writing](./writing): Contains the main figures and latex files for the manuscript
 
+The simulations for signalling and state transitions are performed by Hanuma Sai. The structure is not compatible with the rest of the repo. Refer to:
+- [Sig_ActA_LS](./Sig_ActA_LS) for simulations/analysis for toggle-n networks with cytokine signalling that activates A
+- [Sig_ActA_Inh_LS](./Sig_ActA_LS) for simulations/analysis for toggle-n networks with cytokine signalling that activates A and inhibits the rest
+- [Transdiff_p](./Transdiff_p) for simulations/analysis for state transition dynamics between the steady states of toggle-n networks
+
 ## Usage
 ### 1. Network generation
 Generate the topology files for the networks and save them in the [TOPO](./TOPO) folder. Generates the following:
@@ -50,7 +55,7 @@ Run scripts to perform the simulations for the different types of networks. Ente
 - impure-n
 - embedded-n 
 - team-n
-- rand-n: Toggle-n networks with edge-weights randomly sampled from U(0, 1)
+- rand-n: Toggle-n networks with edge-weights randomly sampled from U(0, 1). The min and max can be changed in the `script_rand.jl` file.
 ```bash
 python run_sim.py <simulation_type>
 ```
@@ -100,3 +105,9 @@ python Fn_embedded.py
 ```bash
 python Fn_team.py
 ```
+
+#### 3.7 Signalling (Figure 5)
+Refer to [Sig_ActA_LS](./Sig_ActA_LS) and [Sig_ActA_Inh_LS](./Sig_ActA_LS) for the analysis scripts.
+
+#### 3.8 State transition analysis (Figure S3)
+Refer to [Transdiff_p](./Transdiff_p) for the analysis scripts.
