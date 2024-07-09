@@ -72,6 +72,7 @@ cd Analysis
 python plot_network.py
 ```
 - Note: The plotting function for graphs with self-regulation is not stable and requires manual tweaking of parameters.
+- The schematic plots in Figure S4 are made manually with inkscape using elements generated from the above script.
 
 #### 3.2 Toggle-n (Figure 1C/S1C/S2C/2A)
 - Iterates through the output files for toggle-n networks and calculate the frequency of $n_{high} = {0,1,2,...n}$ states for each network. 
@@ -88,7 +89,7 @@ python Fn.py
 python Fn_rand.py
 ```
 
-#### 3.4 Toggle-n with impurities (Figure 2C)
+#### 3.4 Toggle-n with impurities (Figure 3B)
 - Analysis and plotting for the edge-weights simulations.
 ```bash
 python Fn_impure.py
@@ -98,6 +99,10 @@ python Fn_impure.py
 - Analysis and plotting for the embedded networks simulations.
 ```bash
 python Fn_embedded.py
+```
+- Plotting with statistical tests (Warning: statannotation requires older python and dependency versions)
+```bash
+python Fn_embedded_statannot.py
 ```
 
 #### 3.6 Team-n networks (Figure 4)
