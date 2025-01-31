@@ -36,6 +36,9 @@ The simulations for signalling and state transitions are performed by Hanuma Sai
 - [Sig_ActA_Inh_LS](./Sig_ActA_LS) for simulations/analysis for toggle-n networks with cytokine signalling that activates A and inhibits the rest
 - [Transdiff_p](./Transdiff_p) for simulations/analysis for state transition dynamics between the steady states of toggle-n networks
 
+The codes for Monotone Boolean function calculations are written by Sarah Adigwe:
+- [mbf-symmetric-net](./mbf-symmetric-net/) has the code for calculations. The outputs for n = 2, 3, 4 are already present in the jupyter notebook
+
 ## Usage
 ### 1. Network generation
 Generate the topology files for the networks and save them in the [TOPO](./TOPO) folder. Generates the following:
