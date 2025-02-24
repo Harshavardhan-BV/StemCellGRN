@@ -3,7 +3,7 @@
 	url = git@github.com:Harshavardhan-BV/RASSPE
 [submodule "Boolean.jl"]
 	path = Boolean.jl
-	url = git@github.com:Harshavardhan-BV/Boolean.jl
+	url = git@github.com:askhari139/Boolean.jl
 [submodule "mbf-symmetric-net"]
 	path = mbf-symmetric-net
 	url = git@github.com:sarahad-sys/mbf-symmetric-net

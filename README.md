@@ -37,7 +37,7 @@ The simulations for signalling and state transitions are performed by Hanuma Sai
 - [Transdiff_p](./Transdiff_p) for simulations/analysis for state transition dynamics between the steady states of toggle-n networks
 
 The codes for Monotone Boolean function calculations are written by Sarah Adigwe:
-- [mbf-symmetric-net](./mbf-symmetric-net/) has the code for calculations. The outputs for n = 2, 3, 4 are already present in the jupyter notebook
+- [mbf-symmetric-net](./mbf-symmetric-net/) has the code for calculations. The outputs for n = 2, 3, 4 (Equivalent to T3, T4, T5, respectively), are already present in the jupyter notebook
 
 ## Usage
 ### 1. Network generation
@@ -71,7 +71,6 @@ cd Analysis
 - Plots the toggle-n network as graphs.
 - Plots the adjacency matrices.
 ```bash
-cd Analysis
 python plot_network.py
 ```
 - Note: The plotting function for graphs with self-regulation is not stable and requires manual tweaking of parameters.
@@ -98,7 +97,7 @@ python Fn_rand.py
 python Fn_impure.py
 ```
 
-#### 3.5 Toggle-n embedded in random networks (Figure 3)
+#### 3.5 Toggle-n embedded in random networks (Figure 4)
 - Analysis and plotting for the embedded networks simulations.
 ```bash
 python Fn_embedded.py
@@ -108,14 +107,14 @@ python Fn_embedded.py
 python Fn_embedded_statannot.py
 ```
 
-#### 3.6 Team-n networks (Figure 4)
+#### 3.6 Team-n networks (Figure 5)
 - Analysis and plotting for the team-n networks simulations.
 ```bash
 python Fn_team.py
 ```
 
-#### 3.7 Signalling (Figure 5)
+#### 3.7 Signalling (Figure 7)
 Refer to [Sig_ActA_LS](./Sig_ActA_LS) and [Sig_ActA_Inh_LS](./Sig_ActA_LS) for the analysis scripts.
 
-#### 3.8 State transition analysis (Figure S3)
+#### 3.8 State transition analysis (Figure S4)
 Refer to [Transdiff_p](./Transdiff_p) for the analysis scripts.
