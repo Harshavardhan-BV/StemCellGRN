@@ -38,6 +38,7 @@ The simulations for signalling and state transitions are performed by Hanuma Sai
 
 The codes for Monotone Boolean function calculations are written by Sarah Adigwe:
 - [mbf-symmetric-net](./mbf-symmetric-net/) has the code for calculations. The outputs for n = 2, 3, 4 (Equivalent to T3, T4, T5, respectively), are already present in the jupyter notebook
+- [MBFs](./MBFs/) contains reimplementation with minor optimizations. Refer to [README](./MBFs/README.md) inside for further details
 
 ## Usage
 ### 1. Network generation
