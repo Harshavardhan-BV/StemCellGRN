@@ -1,0 +1,4 @@
+Output_node,Output_values,EMBF,Out_bin,Status
+y0,[-1  1  1  1 -1 -1],-1,011100,Not Function
+y1,[-1  1 -1  1  1 -1],-1,010110,Not Function
+y2,[-1  1 -1  1 -1  1],-1,010101,Not Function

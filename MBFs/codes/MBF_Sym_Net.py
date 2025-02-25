@@ -9,6 +9,9 @@ n = 5  # Number of nodes in Toggle-n network
 def gen_inps(n):
     # Generate all possible inputs
     inputs = np.array(np.meshgrid(*[[0, 1]]*n)).T.reshape(-1, n)
+    return inputs, input_pairs(inputs)
+
+def input_pairs(inputs):
     inp_sum = np.sum(inputs, axis=1)
     # Choose pairs where left < right sum
     lower_sum = np.array(np.where(inp_sum[:, None] < inp_sum))
@@ -16,7 +19,7 @@ def gen_inps(n):
     comparison = np.all(inputs[lower_sum[0]] <= inputs[lower_sum[1]], axis=1)
     # Select the indices of lower sum pairs where the comparison is True
     inp_pair = lower_sum[:, comparison]
-    return inputs, inp_pair
+    return inp_pair
 
 def generate_rows(n):
     rows = list(combinations_with_replacement([0,1], n))
@@ -41,18 +44,19 @@ def add_func_if_monotonic(func_index):
         with count_arr.get_lock():
             count_arr[:] += add
 #%%
-inputs, inp_pair = gen_inps(n-1)
-#%%
-rows = generate_rows(n-1)
-all_funcs = range(2**len(inputs))
-#%%
-counter = Value('i', 0)
-count_arr = Array('i', [0]*len(rows))
-with Pool(32) as p:
-    p.map(add_func_if_monotonic, all_funcs)
-print('Total number of MBFs found:',counter.value)
-#%%
-# Write the results to a file
-results = np.array(count_arr[:])
-np.savetxt(f"../Output/MBFs_T{n}.txt", results, fmt='%i')
+if __name__ == '__main__':
+    inputs, inp_pair = gen_inps(n-1)
+    #%%
+    rows = generate_rows(n-1)
+    all_funcs = range(2**len(inputs))
+    #%%
+    counter = Value('i', 0)
+    count_arr = Array('i', [0]*len(rows))
+    with Pool(32) as p:
+        p.map(add_func_if_monotonic, all_funcs)
+    print('Total number of MBFs found:',counter.value)
+    #%%
+    # Write the results to a file
+    results = np.array(count_arr[:])
+    np.savetxt(f"../Output/MBFs_T{n}.txt", results, fmt='%i')
 # %%
