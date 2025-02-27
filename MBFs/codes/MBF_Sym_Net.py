@@ -21,7 +21,8 @@ def input_pairs(inputs):
     inp_pair = lower_sum[:, comparison]
     return inp_pair
 
-def generate_rows(n):
+def generate_rows(inputs):
+    n = len(inputs[0])
     rows = list(combinations_with_replacement([0,1], n))
     # Find the index of inputs where the row is present
     return np.where(np.all(inputs[:, None] == rows, axis=2))[0]
@@ -47,7 +48,7 @@ def add_func_if_monotonic(func_index):
 if __name__ == '__main__':
     inputs, inp_pair = gen_inps(n-1)
     #%%
-    rows = generate_rows(n-1)
+    rows = generate_rows(inputs)
     all_funcs = range(2**len(inputs))
     #%%
     counter = Value('i', 0)

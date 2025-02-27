@@ -19,7 +19,7 @@ def ST_IO(n):
         sumvec = adjMat@i
         sumvec = np.sign(sumvec)
         # Where sumvec is 0, keep the original value
-        sumvec = np.where(sumvec==0,i,sumvec)
+        # sumvec = np.where(sumvec==0,i,sumvec)
         ov.append(sumvec)
     df = pd.DataFrame(np.append(iv, ov, axis=1), columns=[f'x{i}' for i in range(n)] + [f'y{i}' for i in range(n)])
     return df
@@ -68,6 +68,7 @@ def check_embf(df):
 embf_map = {-1: "Not Function", -2: "Not Monotone", -3: "Not Essential", 0: "Essential Monotone Boolean Function"}
 # %%
 df = ST_IO(n)
+df.to_csv(f'../Output/Ising_T{n}_IO.txt', index=False, sep=' ')
 # %%
 outs = []
 for i in range(n):
