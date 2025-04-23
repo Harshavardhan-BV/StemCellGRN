@@ -5,7 +5,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import itertools as it
 from scipy.stats import ttest_ind
-sns.set_context('poster')
+sns.set_context('poster', font_scale=1.15)
 #%%
 Fn_all = pd.read_csv('../Analysed_data/embedded_Fn.csv')
 #%%
@@ -30,15 +30,22 @@ def F_i(Fn_all, i, x):
         ylab = r'$F(\frac{n+1}{2})$' 
     return Fi, ylab
 #%%
+
+custom_format = [
+    [1e-3, "***"],
+    [1e-2, "**"],
+    [0.05, "*"],
+    [1, "ns"]
+]
 def plot_Fi_test(Fn_all,i, x='Nodes', y='Avg0', suff='', pfx='', hue=None, test='t-test_ind', **kwargs):
     Fi, ylab = F_i(Fn_all,i,x)
     # Pairs to compare between the hues for a particular x
     pairs = [[(fixed, size1),(fixed, size2)] for size1, size2 in it.combinations(Fi[hue].unique(),2) for fixed in Fi[x].unique()]
     n_hue = len(Fi[hue].unique())
     ax = sns.barplot(x=x,y=y,data=Fi, hue=hue, palette=sns.cubehelix_palette(n_hue),**kwargs)
-    ax.set_ylim(0,1.2)
+    ax.set_ylim(0,1.1)
     annot = Annotator(ax,pairs, data=Fi, x=x, y=y, hue=hue)
-    annot.configure(test=test, text_format='star', verbose=2, text_offset=0.5, hide_non_significant=True, fontsize=12)
+    annot.configure(test=test, verbose=2, text_offset=-5, hide_non_significant=True, pvalue_thresholds=custom_format, fontsize=22, line_height=0, line_offset=0)
     annot.apply_test()
     annot.annotate()
     ax.get_legend().remove()

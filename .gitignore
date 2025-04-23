@@ -162,3 +162,5 @@ cython_debug/
 # Embedded has too many files to ignore
 Output/Embedded_*
 *.tar.xz
+
+writing/Manuscript/Submission_Files
