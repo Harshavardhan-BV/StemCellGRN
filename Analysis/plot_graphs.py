@@ -17,3 +17,7 @@ for topo in topos:
     TopoToAdj(topo, plot=True)
     plot_graphTopo(topo)
 # %%
+plot_graphTopo('TCellDiff')
+# %%
+plot_graphTopo('TCellDiff_SA')
+# %%

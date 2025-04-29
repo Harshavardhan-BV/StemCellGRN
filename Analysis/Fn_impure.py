@@ -43,7 +43,7 @@ def bar_impure(All,n):
     sns.lineplot(x='Impure',y='Avg0',data=All, palette='rocket', hue='sum', legend=False, err_style='bars', err_kws={'capsize':5}, dashes=True, size='wt', markers=True)
     plt.title(f'{n}-node')
     plt.xlabel('Impurity')
-    plt.ylabel('Frequency')
+    plt.ylabel('F(k)')
     plt.ylim(0,1.1)
     plt.savefig(f'../figures/Impure/Impure_{n}.svg')
     plt.clf()

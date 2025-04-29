@@ -18,6 +18,9 @@ def cp_output(topo):
     os.makedirs('Output', exist_ok=True)
     if topo == 'rand-n':
         os.system('cp -r *_rand/ Output/')
+    elif topo== 'tcell':
+        os.system('cp *_finFlagFreq.csv Output/')
+        os.system('cp *_nodes.txt Output/')
     else:
         os.system('cp *_finFlagFreq.csv Output/')
 
@@ -45,8 +48,9 @@ if args.n_thr <= 0:
 maptop = {'toggle-n': 'T[1-9].topo',
           'rand-n': 'T[1-9].topo',
           'impure-n': 'Impure*.topo',
-          'embedded-n': 'Embedded*.topo',
-          'team-n': 'Team*.topo'}
+          'embedded-n': 'Embedded_T[1-9].topo',
+          'team-n': 'Team*.topo',
+          'tcell': '*TCellDiff*.topo'}
 
 print('Running simulation for', args.topo)
 
