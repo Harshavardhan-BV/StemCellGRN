@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 import sys
+import networkx as nx
 sys.path.insert(0,'./RASSPE/')
 import net_gen as ng
 #%%
@@ -39,3 +40,14 @@ n = 6
 m_max = n*(n-1)
 for m in range(m_max+1):
     ng.impure_n(n,m, 50)
+#%%
+# Embed TCellDiff network
+topo = 'TCellDiff'
+df = pd.read_csv('./TOPO/'+topo+'.topo',sep='\t')
+df.columns = ['source', 'target', 'weight']
+# Generate the graph
+G = nx.from_pandas_edgelist(df, source='source', target='target', edge_attr='weight', create_using=nx.DiGraph)
+for size in range(10,21,5):
+    for density in range(2,7,2):
+        ng.embedded(G, size, density, 100, topo)
+# %%

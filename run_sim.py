@@ -16,9 +16,9 @@ def clear_output():
 def cp_output(topo):
     # Copy the output to the output folder
     os.makedirs('Output', exist_ok=True)
-    if topo == 'rand-n':
+    if (topo == 'rand-n') or (topo =='tcell-rand'):
         os.system('cp -r *_rand/ Output/')
-    elif topo== 'tcell':
+    elif (topo== 'tcell') or (topo== 'tcell-embedded'):
         os.system('cp *_finFlagFreq.csv Output/')
         os.system('cp *_nodes.txt Output/')
     else:
@@ -34,7 +34,7 @@ def cp_topo(topo):
     os.system(f'cp ./TOPO/{topo} .')
 
 def run_sim(topo, n_thr):
-    if topo == 'rand-n':
+    if (topo == 'rand-n') or (topo =='tcell-rand'):
         # Run the script_rand.jl
         cmd = f'julia -t {n_thr} script_rand.jl'
     else:
@@ -50,7 +50,10 @@ maptop = {'toggle-n': 'T[1-9].topo',
           'impure-n': 'Impure*.topo',
           'embedded-n': 'Embedded_T[1-9].topo',
           'team-n': 'Team*.topo',
-          'tcell': '*TCellDiff*.topo'}
+          'tcell': 'TCellDiff*.topo',
+          'tcell-rand': 'TCellDiff*.topo',
+          'tcell-embedded': 'Embedded_TCellDiff*.topo'
+          }
 
 print('Running simulation for', args.topo)
 

@@ -26,9 +26,11 @@ def plot_f(ss, master_regs, fname):
     plt.xlabel('Frequency')
     plt.savefig(f'../figures/TCellDiff/F_{fname}.svg')
 #%%
-def read_state(fname, reindex=False):
-    nodes = pd.read_csv(f'../Output/{fname}_nodes.txt', header=None)
-    ss = pd.read_csv(f'../Output/{fname}_finFlagFreq.csv')
+def read_state(fname, nodename=None,reindex=False,outpath='../Output'):
+    if nodename is None:
+        nodename = fname
+    nodes = pd.read_csv(f'{outpath}/{nodename}_nodes.txt', header=None)
+    ss = pd.read_csv(f'{outpath}/{fname}_finFlagFreq.csv')
     split_ss= ss['states'].str.split('_', expand=True).astype(int)
     split_ss.columns = nodes[0]
     split_ss = split_ss[master_regs]
@@ -51,4 +53,47 @@ plot_f(df, master_regs, fname)
 fname = 'TCellDiff'
 df = read_state(fname)
 plot_f(df, master_regs, fname)
+# %%
+files = glob.glob('Embedded_TCellDiff_*_finFlagFreq.csv',root_dir='../Output')
+files = [os.path.basename(x).replace('_finFlagFreq.csv','') for x in files]
+# %%
+All = pd.DataFrame()
+for topo in files:
+    print(topo)
+    # Get the number of nodes and the team size
+    size, density, i = np.array(topo.split('_')[2:], dtype=int)
+    df = read_state(topo, reindex=True)
+    if df is None:
+        continue
+    df['file'] = topo
+    df['Emb_size'] = size
+    df['Emb_density'] = density
+    All = pd.concat([All,df], axis=0)
 #%%
+All.to_csv('../Analysed_data/Embedded_TCellDiff.csv',index=False)
+# %%
+plot_f(All, master_regs,f'Embedded_{fname}')
+#%%
+for Emb_size in All['Emb_size'].unique():
+    for Emb_dens in All['Emb_density'].unique():
+        All_i = All[(All['Emb_density']==Emb_dens) & (All['Emb_size']==Emb_size)]
+        plot_f(All_i,master_regs,f'Embedded_{fname}_embsize-{Emb_size}_embdens-{Emb_dens}')
+# %%
+files = glob.glob(f'*_finFlagFreq.csv',root_dir=f'../Output/{fname}_rand/0.0_1.0')
+files = [os.path.basename(x).replace('_finFlagFreq.csv','') for x in files]
+# %%
+All = pd.DataFrame()
+for topo in files:
+    print(topo)
+    df = read_state(topo, nodename=fname, outpath=f'../Output/{fname}_rand/0.0_1.0')
+    if df is None:
+        continue
+    df['file'] = topo
+    All = pd.concat([All,df], axis=0)
+# %%
+All.to_csv('../Analysed_data/TCellDiff_rand.csv',index=False)
+#%%
+All = All[All[master_regs].apply(tuple, axis=1).isin(All.groupby(master_regs).any()['Avg0'].index)]
+# %%
+plot_f(All, master_regs,f'{fname}_rand')
+# %%
