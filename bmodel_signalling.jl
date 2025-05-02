@@ -1,7 +1,7 @@
 include("Boolean.jl/dependencies.jl")
 include("Boolean.jl/utils.jl")
 
-function async_sig_Update(update_matrix::Array{Int,2},
+function async_sig_Update(update_matrix::Array,
     nInit::Int, nIter::Int, stateRep::Int; cytNodes::Vector{Int})
     n_nodes = size(update_matrix,1)
     stateVec = ifelse(stateRep == 0, [0,1], [-1,1])

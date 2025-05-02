@@ -21,5 +21,5 @@ plot_graphTopo('TCellDiff')
 # %%
 plot_graphTopo('TCellDiff_SA')
 # %%
-plot_graphTopo('Cyt_TCell',layout='shell')
+plot_graphTopo('Cyt_TCell_plot',layout='shell')
 # %%
