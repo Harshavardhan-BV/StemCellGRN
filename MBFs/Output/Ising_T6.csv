@@ -1,13 +1,13 @@
-Output_node,Output_values,EMBF,Out_bin,Status
+Output_node,Output_values,EMBF,DNF,Out_bin,Status
 y0,"[-1 -1 -1 -1 -1 -1 -1  1 -1 -1 -1  1 -1  1  1  1 -1 -1 -1  1 -1  1  1  1
- -1  1  1  1  1  1  1  1]",0,00000001000101110001011101111111,Essential Monotone Boolean Function
+ -1  1  1  1  1  1  1  1]",0,(x1 & x2 & x3) | (x1 & x2 & x4) | (x1 & x2 & x5) | (x1 & x3 & x4) | (x1 & x3 & x5) | (x1 & x4 & x5) | (x2 & x3 & x4) | (x2 & x3 & x5) | (x2 & x4 & x5) | (x3 & x4 & x5),00000001000101110001011101111111,Essential Monotone Boolean Function
 y1,"[-1 -1 -1 -1 -1 -1 -1  1 -1 -1 -1  1 -1  1  1  1 -1 -1 -1  1 -1  1  1  1
- -1  1  1  1  1  1  1  1]",0,00000001000101110001011101111111,Essential Monotone Boolean Function
+ -1  1  1  1  1  1  1  1]",0,(x0 & x2 & x3) | (x0 & x2 & x4) | (x0 & x2 & x5) | (x0 & x3 & x4) | (x0 & x3 & x5) | (x0 & x4 & x5) | (x2 & x3 & x4) | (x2 & x3 & x5) | (x2 & x4 & x5) | (x3 & x4 & x5),00000001000101110001011101111111,Essential Monotone Boolean Function
 y2,"[-1 -1 -1 -1 -1 -1 -1  1 -1 -1 -1  1 -1  1  1  1 -1 -1 -1  1 -1  1  1  1
- -1  1  1  1  1  1  1  1]",0,00000001000101110001011101111111,Essential Monotone Boolean Function
+ -1  1  1  1  1  1  1  1]",0,(x0 & x1 & x3) | (x0 & x1 & x4) | (x0 & x1 & x5) | (x0 & x3 & x4) | (x0 & x3 & x5) | (x0 & x4 & x5) | (x1 & x3 & x4) | (x1 & x3 & x5) | (x1 & x4 & x5) | (x3 & x4 & x5),00000001000101110001011101111111,Essential Monotone Boolean Function
 y3,"[-1 -1 -1 -1 -1 -1 -1  1 -1 -1 -1  1 -1  1  1  1 -1 -1 -1  1 -1  1  1  1
- -1  1  1  1  1  1  1  1]",0,00000001000101110001011101111111,Essential Monotone Boolean Function
+ -1  1  1  1  1  1  1  1]",0,(x0 & x1 & x2) | (x0 & x1 & x4) | (x0 & x1 & x5) | (x0 & x2 & x4) | (x0 & x2 & x5) | (x0 & x4 & x5) | (x1 & x2 & x4) | (x1 & x2 & x5) | (x1 & x4 & x5) | (x2 & x4 & x5),00000001000101110001011101111111,Essential Monotone Boolean Function
 y4,"[-1 -1 -1 -1 -1 -1 -1  1 -1 -1 -1  1 -1  1  1  1 -1 -1 -1  1 -1  1  1  1
- -1  1  1  1  1  1  1  1]",0,00000001000101110001011101111111,Essential Monotone Boolean Function
+ -1  1  1  1  1  1  1  1]",0,(x0 & x1 & x2) | (x0 & x1 & x3) | (x0 & x1 & x5) | (x0 & x2 & x3) | (x0 & x2 & x5) | (x0 & x3 & x5) | (x1 & x2 & x3) | (x1 & x2 & x5) | (x1 & x3 & x5) | (x2 & x3 & x5),00000001000101110001011101111111,Essential Monotone Boolean Function
 y5,"[-1 -1 -1 -1 -1 -1 -1  1 -1 -1 -1  1 -1  1  1  1 -1 -1 -1  1 -1  1  1  1
- -1  1  1  1  1  1  1  1]",0,00000001000101110001011101111111,Essential Monotone Boolean Function
+ -1  1  1  1  1  1  1  1]",0,(x0 & x1 & x2) | (x0 & x1 & x3) | (x0 & x1 & x4) | (x0 & x2 & x3) | (x0 & x2 & x4) | (x0 & x3 & x4) | (x1 & x2 & x3) | (x1 & x2 & x4) | (x1 & x3 & x4) | (x2 & x3 & x4),00000001000101110001011101111111,Essential Monotone Boolean Function

@@ -3,10 +3,13 @@ import numpy as np
 import pandas as pd
 import itertools as it
 import sys
+from sympy import symbols, Or, And, Not, to_dnf
+from sympy.logic import SOPform
+from sympy.logic.boolalg import truth_table
 sys.path.insert(0,'../codes/')
 from MBF_Sym_Net import input_pairs, is_monotonic
 #%%
-n = 2 # Number of nodes in Toggle-n network
+n = 8 # Number of nodes in Toggle-n network
 #%%
 def ST_IO(n):
     # Generate adjacency matrix for a Toggle-n network
@@ -65,6 +68,40 @@ def check_embf(df):
         return -3
     return 0
 
+def truthtable_dnf(df):
+    # The first n-1 columns are the inputs.
+    var_names = list(df.columns[:-1])
+    sym_vars = symbols(var_names)
+    
+    # Create a mapping from variable names to sympy symbols.
+    var_map = dict(zip(var_names, sym_vars))
+    
+    terms = []
+    # Process each row to create an AND clause for rows with output +1.
+    for _, row in df.iterrows():
+        # The inputs are all columns except the last.
+        inputs = row.iloc[:-1].tolist()
+        output = row.iloc[-1]
+        
+        # Only consider rows where the output is +1 (logical True).
+        if output == +1:
+            # For each input, use the variable if +1 for ANDing
+            literals = []
+            for var, val in zip(var_names, inputs):
+                if val == -1:
+                    literals.append(var_map[var])
+            # Append the conjunction (AND) of literals.
+            terms.append(And(*literals))
+    
+    # If no row produces a True output, return False.
+    if not terms:
+        return False
+
+    # Combine all the terms with OR and simplify to DNF.
+    expr = Or(*terms)
+    expr_dnf = to_dnf(expr, simplify=True)
+    return expr_dnf
+
 embf_map = {-1: "Not Function", -2: "Not Monotone", -3: "Not Essential", 0: "Essential Monotone Boolean Function"}
 # %%
 df = ST_IO(n)
@@ -81,14 +118,17 @@ for i in range(n):
         for j in [1,-1]:
             df_io1 = df_io.replace(0,j)
             embf = check_embf(df_io1)
-            outs.append([f'y{i}', df_io1[f'y{i}'].values, embf])
+            dnf = truthtable_dnf(df_io1)
+            outs.append([f'y{i}', df_io1[f'y{i}'].values, embf, dnf])
     else:
         embf = check_embf(df_io)
-        outs.append([f'y{i}', df_io[f'y{i}'].values, embf])
+        dnf = truthtable_dnf(df_io)
+        outs.append([f'y{i}', df_io[f'y{i}'].values, embf, dnf])
 # %%
-df = pd.DataFrame(outs, columns=['Output_node', 'Output_values', 'EMBF'])
+df = pd.DataFrame(outs, columns=['Output_node', 'Output_values', 'EMBF', 'DNF'])
 # %%
 df['Out_bin'] = df['Output_values'].apply(lambda x: ''.join([str(i).replace('-1', '0') for i in x]))
 df['Status'] = df['EMBF'].map(embf_map)
 # %%
 df.to_csv(f'../Output/Ising_T{n}.csv', index=False)
+# %%

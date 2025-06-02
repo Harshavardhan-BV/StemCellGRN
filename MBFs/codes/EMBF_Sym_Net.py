@@ -70,6 +70,7 @@ if __name__ == '__main__':
     df.to_csv(f'../Output/EMBF_T{n}_funcs.txt', index=False, header=False, sep=' ')
 # %%
 for i in df.index:
-    df_io = pd.DataFrame(np.hstack((inputs, df.loc[i,:].values[:, None])))
-    df_io.groupby(list(range(n-2))).nunique()
+    df_io = pd.DataFrame(np.hstack((inputs, df.loc[i,:].values[:, None])), columns=[f'x{i}' for i in range(n-1)] + ['y'])
+    not_j = df_io.columns[:-1].difference(['x0'])
+    print(df_io.groupby(not_j.tolist()).nunique())
 # %%

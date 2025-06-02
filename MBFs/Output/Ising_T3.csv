@@ -1,7 +1,7 @@
-Output_node,Output_values,EMBF,Out_bin,Status
-y0,[-1  1  1  1],0,0111,Essential Monotone Boolean Function
-y0,[-1 -1 -1  1],0,0001,Essential Monotone Boolean Function
-y1,[-1  1  1  1],0,0111,Essential Monotone Boolean Function
-y1,[-1 -1 -1  1],0,0001,Essential Monotone Boolean Function
-y2,[-1  1  1  1],0,0111,Essential Monotone Boolean Function
-y2,[-1 -1 -1  1],0,0001,Essential Monotone Boolean Function
+Output_node,Output_values,EMBF,DNF,Out_bin,Status
+y0,[-1  1  1  1],0,x1 | x2,0111,Essential Monotone Boolean Function
+y0,[-1 -1 -1  1],0,x1 & x2,0001,Essential Monotone Boolean Function
+y1,[-1  1  1  1],0,x0 | x2,0111,Essential Monotone Boolean Function
+y1,[-1 -1 -1  1],0,x0 & x2,0001,Essential Monotone Boolean Function
+y2,[-1  1  1  1],0,x0 | x1,0111,Essential Monotone Boolean Function
+y2,[-1 -1 -1  1],0,x0 & x1,0001,Essential Monotone Boolean Function

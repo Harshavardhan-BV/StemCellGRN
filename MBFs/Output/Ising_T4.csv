@@ -1,5 +1,5 @@
-Output_node,Output_values,EMBF,Out_bin,Status
-y0,[-1 -1 -1  1 -1  1  1  1],0,00010111,Essential Monotone Boolean Function
-y1,[-1 -1 -1  1 -1  1  1  1],0,00010111,Essential Monotone Boolean Function
-y2,[-1 -1 -1  1 -1  1  1  1],0,00010111,Essential Monotone Boolean Function
-y3,[-1 -1 -1  1 -1  1  1  1],0,00010111,Essential Monotone Boolean Function
+Output_node,Output_values,EMBF,DNF,Out_bin,Status
+y0,[-1 -1 -1  1 -1  1  1  1],0,(x1 & x2) | (x1 & x3) | (x2 & x3),00010111,Essential Monotone Boolean Function
+y1,[-1 -1 -1  1 -1  1  1  1],0,(x0 & x2) | (x0 & x3) | (x2 & x3),00010111,Essential Monotone Boolean Function
+y2,[-1 -1 -1  1 -1  1  1  1],0,(x0 & x1) | (x0 & x3) | (x1 & x3),00010111,Essential Monotone Boolean Function
+y3,[-1 -1 -1  1 -1  1  1  1],0,(x0 & x1) | (x0 & x2) | (x1 & x2),00010111,Essential Monotone Boolean Function
