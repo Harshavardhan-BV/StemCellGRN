@@ -4,10 +4,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 plt.rcParams['svg.hashsalt'] = ''
+sns.set_context('poster')
 #%%
 lis = []
 for i in range(2, 7):
-    df = pd.read_csv(f"./Output/MBFs_T{i}.txt", header=None)
+    df = pd.read_csv(f"../Output/MBFs_T{i}.txt", header=None)
     df.columns = ['v']
     for j in range(i+1):
         if j==0:
@@ -21,12 +22,13 @@ for i in range(2, 7):
         nij = np.exp(log_lhs + log_rhs)
         lis.append([i, j, nij])
 # %%
-df = pd.DataFrame(lis, columns=['i', 'j', 'nij'])
+df = pd.DataFrame(lis, columns=['n', 'k', 'phi'])
 df.to_csv("../Analysed_data/MBFs.csv", index=False)
 # %%
-sns.barplot(x='i', y='nij', data=df, hue='j', palette='rocket')
+p = sns.barplot(x='n', y='phi', data=df, hue='k', palette='rocket')
 plt.yscale('log')
-plt.savefig(f"../figures/MBFs.svg")
+plt.ylabel(r'$\phi^n_k$')
+plt.savefig(f"../figures/MBFs.svg", bbox_inches='tight')
 # %%
 for i in df['i'].unique():
     df1 = df[df['i']==i]

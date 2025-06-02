@@ -25,15 +25,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
-     inkscape:zoom="0.61614583"
-     inkscape:cx="49.501269"
-     inkscape:cy="260.49028"
+     inkscape:zoom="3.4854472"
+     inkscape:cx="205.28213"
+     inkscape:cy="136.9982"
      inkscape:window-width="1920"
      inkscape:window-height="1008"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g64" />
+     inkscape:current-layer="figure_1" />
   <metadata
      id="metadata1">
     <rdf:RDF>
@@ -92,11 +92,11 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3"
-       id="linearGradient4"
-       x1="138.56471"
-       y1="63.124191"
-       x2="178.29456"
-       y2="63.124191"
+       id="linearGradient7"
+       x1="98.02578"
+       y1="77.916138"
+       x2="137.75562"
+       y2="77.916138"
        gradientUnits="userSpaceOnUse"
        spreadMethod="repeat" />
   </defs>
@@ -551,7 +551,7 @@
              xlink:href="#C0_0_cbdcdabd6c"
              x="158.42964"
              y="63.124191"
-             style="fill:url(#linearGradient4);stroke:#000000;fill-opacity:1"
+             style="fill:#f09e6c;stroke:#000000;fill-opacity:1"
              id="use64" />
         </g>
         <g
@@ -562,7 +562,7 @@
              xlink:href="#C0_0_cbdcdabd6c"
              x="117.89069"
              y="77.916138"
-             style="fill:#f09e6c;stroke:#000000;fill-opacity:1"
+             style="fill:url(#linearGradient7);stroke:#000000;fill-opacity:1"
              id="use65" />
         </g>
         <g

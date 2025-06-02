@@ -106,7 +106,7 @@ for Ti in range(2,5):
         df = read_state(fname, master_regs)
         plot_f(df, master_regs, fname)
 # %%
-def edge_signalling(fname, src_node, cyt_node, master_regs, ew_max=10, sw_max=10):
+def edge_signalling(fname, src_node, cyt_node, master_regs, ew_max=10, sw_max=10, save=True):
     e_df = []
     for ew in range(1,ew_max+1):
         for sw in range(1,sw_max+1):
@@ -116,6 +116,8 @@ def edge_signalling(fname, src_node, cyt_node, master_regs, ew_max=10, sw_max=10
             new_df = df[(df[src_node] == 1) & (df[master_regs].drop(columns=[src_node]).sum(axis=1) == 0)]
             e_df.append([ew, sw, new_df['Avg0'].values[0] if not new_df.empty else 0])
     e_df = pd.DataFrame(e_df, columns=['EW','SW','FA1'])
+    if save:
+        e_df.to_csv(f'../Analysed_data/{fname}_{src_node}_{cyt_node}.csv',index=False)
     return e_df
 
 def plot_edge_signalling(df, fname, cmap='viridis'):
@@ -137,4 +139,32 @@ plot_edge_signalling(df, 'Cyt_T4_Th17', 'Greens')
 # %%
 df = edge_signalling('Cyt_T4_Treg','FOXP3', 'TGFB', master_regs)
 plot_edge_signalling(df,'Cyt_T4_Treg','Reds')
+# %%
+def find_midpoints(i):
+    partitions = i + 1
+    length_per_partition = i / partitions
+    midpoints = []
+    
+    for k in range(1, partitions + 1):
+        start = (k - 1) * length_per_partition
+        end = k * length_per_partition
+        midpoint = (start + end) / 2
+        midpoints.append(midpoint)
+    
+    return midpoints
+
+# Colorbar bcos ....
+for i in range(2,6):
+    fig, ax = plt.subplots(figsize=(0.7*(i+1), 1.5))
+    cmap = sns.color_palette('rocket', n_colors=i+1)
+    norm = plt.Normalize(0, i)
+    sm = plt.cm.ScalarMappable(cmap=plt.cm.colors.ListedColormap(cmap), norm=norm)
+    sm.set_array([])
+    cb1 = plt.colorbar(sm, cax=ax, orientation='horizontal')
+    cb1.set_label('k')
+    cb1.set_ticks(find_midpoints(i))
+    cb1.ax.set_xticklabels(range(i+1))
+    plt.tight_layout()
+    plt.savefig(f'../figures/TCellDiff/Colorbar_{i}.svg')
+    plt.close()
 # %%
